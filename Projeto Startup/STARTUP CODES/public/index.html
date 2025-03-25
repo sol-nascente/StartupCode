@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB0klEQVRYhe2VO0tcURSFP3zEsbXX1JE0g476A7SwCQSCYqsDgyCK8YFaKMI0WiSNf8DaX2AR0ELR+ABBGLBQRLDRgIJPFK/FWYfZHEVmkptCuKtb3zlnr8Nln30hUaJE70yzwEHA5oAHIAJOgZ7/FT6lkG3D9sUKwCJwJf8j7vAJFd4wbE/se7B3GfgcZ/j4K+E7YqPydXEGWo0paNOwTbFJ+Vr5leBspdb+WiOvhK+JTcungHuxFrFPwKFYBFwCHeWGd+vwb8NWxfLyNcCdWFqszQTncY17Kf+lnAtEwInxv8Tm5D8At2JNYq3yV0BVUO8ceCo1/KMK9cnn5H/KVwM3Ys1iGflrrQN0mpqDWq8v5QL12pwzrMuEX2s9I9Ysf4P7MgAzYtngAg2lXADgETgLWBXFQdMq1iR/a8L9wFo2Z/+IlaxOih08hWso31xt2pOWv8M1JLi5EOF6xqsg9rWcCwC0Axcm+Aj3xMA9uQj3BFNiQ2KrpoYf1QPlhlulgIqAraiwHzT98utmjx/Vg/8S/pb8+M3ycmbsig3FGdgILAWsV0G7hm2JDccZDjCvwmfAAsV/wp7Z439SI3GHe30Djim++3ywXsC9mkSJEr0fPQMYZJApzxnpNAAAAABJRU5ErkJggg=="
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="Meio">
+      <form class="form" id="registerForm">
+        <p class="title">Register</p>
+        <a href="#"><p class="message">voltar</p></a>
+        <div class="flex">
+          <label>
+            <input class="input" type="text" placeholder="Firstname" required />
+            <span>Firstname</span>
+          </label>
+          <label>
+            <input class="input" type="text" placeholder="Lastname" required />
+            <span>Lastname</span>
+          </label>
+        </div>
+        <label>
+          <input class="input" type="email" placeholder="Email" required />
+          <span>Email</span>
+        </label>
+        <label>
+          <input
+            class="input"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <span>Password</span>
+        </label>
+        <label>
+          <input
+            class="input"
+            type="password"
+            placeholder="Confirm_password"
+            required
+          />
+          <span>Confirm password</span>
+        </label>
+        <button type="submit" class="submit">Submit</button>
+        <p class="signin">
+          Already have an account? <a class="btn2" href="#">SignIn</a>
+        </p>
+      </form>
+    </div>
+    <div class="Meio2">
+      <form class="form2" id="loginForm">
+        <p class="title2">Login</p>
+        <a href="#"><p class="message2">voltar</p></a>
+        <div class="flex2">
+          <label>
+            <input
+              class="input2"
+              type="text"
+              placeholder="Firstname"
+              required
+            />
+            <span>Firstname</span>
+          </label>
+        </div>
+        <label>
+          <input class="input2" type="email" placeholder="Email" required />
+          <span>Email</span>
+        </label>
+        <label>
+          <input
+            class="input2"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <span>Password</span>
+        </label>
+        <button type="submit" class="submit2">Submit</button>
+        <p class="signin2">
+          Don't have an account? <a class="btn3" href="#">SignUp</a>
+        </p>
+      </form>
+    </div>
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Left Section -->
+        <div class="left-section space-y-6">
+          <h1>
+            Nome e Logo
+            <br />
+            Designing the Future!
+          </h1>
+          <p class="P1">
+            Design is the process of creating visual and functional elements to
+            communicate messages effectively. It involves understanding user
+            needs and applying creativity to solve problems. From typography to
+            color theory, every choice in design has a purpose, influencing how
+            users interact with a product.
+          </p>
+          <button class="btn1">Get started</button>
+
+          <div class="notification">
+            <div class="notiglow"></div>
+            <div class="notiborderglow"></div>
+            <div class="notititle">Plans</div>
+            <div class="notibody">
+              A plan that costs up to $100 dollars<br />
+              $100,00
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="card">
+              <h2>Bringing Ideas to Life</h2>
+              <p>
+                Our designers combine creativity and strategy to craft impactful
+                and effective visuals.
+              </p>
+            </div>
+            <div class="card">
+              <h2>Tailored Design Services</h2>
+              <p>
+                From branding to UI design, we create unique solutions that make
+                a lasting impression.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right Section -->
+        <div class="image-grid grid grid-cols-2 gap-4">
+          <img
+            alt="A beautiful sunset view"
+            src="https://i.pinimg.com/736x/9e/dc/ee/9edcee6efb786d4483d050e962a0ceb7.jpg"
+          />
+          <img
+            alt="Scenic mountain landscape"
+            src="https://i.pinimg.com/736x/09/10/0d/09100d3aa42a1fe1899173301414cffa.jpg"
+          />
+          <img
+            alt="Vibrant city skyline at night"
+            src="https://i.pinimg.com/736x/b6/b0/a7/b6b0a7a74321d37b7e03169a84a2e303.jpg"
+          />
+          <img
+            alt="A peaceful beach at sunset"
+            src="https://i.pinimg.com/736x/99/3d/54/993d548560c26a9c0ae1907e39319581.jpg"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      $(".Meio").hide();
+      $(".Meio2").hide();
+
+      $(".btn1").click(function () {
+        $(".Meio").fadeIn();
+      });
+
+      $(".message").click(function () {
+        $(".Meio").fadeOut();
+      });
+
+      $(".btn2").click(function () {
+        $(".Meio").fadeOut();
+        $(".Meio2").fadeIn();
+      });
+
+      $(".message2").click(function () {
+        $(".Meio2").fadeOut();
+      });
+
+      $(".btn3").click(function () {
+        $(".Meio").fadeIn();
+        $(".Meio2").fadeOut();
+      });
+
+      $(".btn1").click(function () {
+        $(".Meio2").fadeOut();
+      });
+
+      // Função para fazer login
+      function loginUser(event) {
+        event.preventDefault();
+
+        const email = document
+          .querySelector('#loginForm input[placeholder="Email"]')
+          .value.trim();
+        const password = document
+          .querySelector('#loginForm input[placeholder="Password"]')
+          .value.trim();
+
+        const userData = localStorage.getItem(email);
+
+        if (userData) {
+          const user = JSON.parse(userData);
+
+          if (user.password === password) {
+            alert("Login realizado com sucesso!");
+            localStorage.setItem("currentUser ", JSON.stringify(user)); // Armazena o usuário atual
+            window.location.href = "Home.html"; // Redireciona para Home.html
+          } else {
+            alert("Senha incorreta!");
+          }
+        } else {
+          alert("Usuário não encontrado!");
+        }
+      }
+
+      document
+        .querySelector("#loginForm")
+        .addEventListener("submit", loginUser);
+
+      // Função para fazer Cadastro
+      function registerUser(event) {
+        event.preventDefault();
+
+        const firstname = document
+          .querySelector('#registerForm input[placeholder="Firstname"]')
+          .value.trim();
+        const email = document
+          .querySelector('#registerForm input[placeholder="Email"]')
+          .value.trim();
+        const password = document
+          .querySelector('#registerForm input[placeholder="Password"]')
+          .value.trim();
+        const confirmPassword = document
+          .querySelector('#registerForm input[placeholder="Confirm_password"]')
+          .value.trim();
+
+        if (!email.includes("@") || !email.includes(".")) {
+          alert("Por favor, insira um email válido!");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("As senhas não coincidem!");
+          return;
+        }
+
+        const user = {
+          firstname,
+          email,
+          password,
+        };
+
+        localStorage.setItem(email, JSON.stringify(user)); // Salvar pelo EMAIL
+        alert("Cadastro realizado com sucesso!");
+        localStorage.setItem("currentUser ", JSON.stringify(user)); // Armazena o usuário atual
+        window.location.href = "Home.html"; // Redireciona para Home.html
+      }
+
+      document
+        .querySelector("#registerForm")
+        .addEventListener("submit", registerUser);
+    </script>
+  </body>
+</html>

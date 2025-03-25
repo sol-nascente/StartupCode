@@ -1,0 +1,212 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="CSS/Home.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB0klEQVRYhe2VO0tcURSFP3zEsbXX1JE0g476A7SwCQSCYqsDgyCK8YFaKMI0WiSNf8DaX2AR0ELR+ABBGLBQRLDRgIJPFK/FWYfZHEVmkptCuKtb3zlnr8Nln30hUaJE70yzwEHA5oAHIAJOgZ7/FT6lkG3D9sUKwCJwJf8j7vAJFd4wbE/se7B3GfgcZ/j4K+E7YqPydXEGWo0paNOwTbFJ+Vr5leBspdb+WiOvhK+JTcungHuxFrFPwKFYBFwCHeWGd+vwb8NWxfLyNcCdWFqszQTncY17Kf+lnAtEwInxv8Tm5D8At2JNYq3yV0BVUO8ceCo1/KMK9cnn5H/KVwM3Ys1iGflrrQN0mpqDWq8v5QL12pwzrMuEX2s9I9Ysf4P7MgAzYtngAg2lXADgETgLWBXFQdMq1iR/a8L9wFo2Z/+IlaxOih08hWso31xt2pOWv8M1JLi5EOF6xqsg9rWcCwC0Axcm+Aj3xMA9uQj3BFNiQ2KrpoYf1QPlhlulgIqAraiwHzT98utmjx/Vg/8S/pb8+M3ycmbsig3FGdgILAWsV0G7hm2JDccZDjCvwmfAAsV/wp7Z439SI3GHe30Djim++3ywXsC9mkSJEr0fPQMYZJApzxnpNAAAAABJRU5ErkJggg=="
+      type="image/x-icon"
+    />
+
+  <script src='./JS/Home.js></script>
+
+    
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="Home.html" class="active">Home</a>
+        <a href="Donations.html">Donations</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+        <a href="BestDesigners.html">Best Designers</a>
+        <a href="Collaborations.html">Collaborations</a>
+      </nav>
+      <div class="actions">
+        <a class="Linkpremium" href="Premium.html">
+          <button>Upgrade to Premium</button></a
+        >
+
+        <i class="sun">
+          <label
+            for="themeToggle"
+            class="themeToggle st-sunMoonThemeToggleBtn"
+            aria-label="Toggle light/dark theme"
+          >
+            <input type="checkbox" id="themeToggle" class="themeToggleInput" />
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              stroke="none"
+            >
+              <mask id="moon-mask">
+                <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                <circle cx="11" cy="3" r="8" fill="black"></circle>
+              </mask>
+              <circle
+                class="sunMoon"
+                cx="10"
+                cy="10"
+                r="8"
+                mask="url(#moon-mask)"
+              ></circle>
+              <g>
+                <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                <circle
+                  class="sunRay sunRay2"
+                  cx="14"
+                  cy="16.928"
+                  r="1.5"
+                ></circle>
+                <circle
+                  class="sunRay sunRay3"
+                  cx="6"
+                  cy="16.928"
+                  r="1.5"
+                ></circle>
+                <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                <circle
+                  class="sunRay sunRay5"
+                  cx="6"
+                  cy="3.1718"
+                  r="1.5"
+                ></circle>
+                <circle
+                  class="sunRay sunRay6"
+                  cx="14"
+                  cy="3.1718"
+                  r="1.5"
+                ></circle>
+              </g>
+            </svg>
+          </label>
+        </i>
+        <i class="bars">
+          <div class="hamburgers">
+            <label class="hamburger">
+              <input type="checkbox" />
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </label>
+          </div>
+        </i>
+      </div>
+    </header>
+    <div class="barLado">
+      <a href="#">Client</a><br />
+      <a href="#">Favorites</a><br />
+      <a href="Termos.html">Terms</a><br />
+      <a href="#">Social</a><br />
+      <a href="#">Settings</a><br />
+      <a href="index.html">LogOut</a><br />
+    </div>
+    <div class="container">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <!-- Profile Card ------------------>
+        <div class="profile-cd">
+          <div class="flex flex-col items-center">
+            <h1 class="Name">Name</h1>
+
+            <div
+              class="image-container"
+              onclick="document.getElementById('imageInput').click();"
+            >
+              <img
+                id="profileImage"
+                alt="Your Profile"
+                class="Img1"
+                src="https://placehold.co/200x200"
+              />
+            </div>
+
+            <input
+              type="file"
+              id="imageInput"
+              accept="image/*"
+              class="image-input"
+              onchange="loadImage(event)"
+            />
+            <br />
+            <p class="Perfil">Perfil:</p>
+            <p class="Email">Email@gmail.com</p>
+            <p class="Sex">User: FREE</p>
+            <p>Nationality:</p>
+            <p class="location">State, Country</p>
+
+            <button>View profile</button>
+          </div>
+        </div>
+
+        <!-- Main Content --------------------------------------->
+
+        <div class="main-content flex-1 text-center md:text-left">
+          <div class="mb-8">
+            <h2>Logo e nome</h2>
+            <h3 class="h3">Digital designer and illustrator.</h3>
+          </div>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#"><button>My Designs</button></a>
+
+            <a href="#"><button>Submit Your Design</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pesquisa -->
+
+      <div class="container-input">
+        <input type="text" placeholder="Search" name="text" class="input" />
+        <svg
+          fill="#000000"
+          width="20px"
+          height="20px"
+          viewBox="0 0 1920 1920"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
+
+      <!---------------------------------------------------------->
+    </div>
+    <div class="Baixo">
+      <div class="Post">
+        <div class="Post-image"></div>
+        <p class="Post-title">Madson</p>
+        <p class="Post-body">
+          Nullam ac tristique nulla, at convallis quam. Integer consectetur mi
+          nec magna tristique, non lobortis.
+        </p>
+        <p class="footer">
+          Written by <span class="by-name">John Doe</span> on
+          <span class="date">25/05/23</span>
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2025 NOME KKKK</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+html {
+  font-family: "Roboto Mono", monospace;
+  height: 100%;
+  width: 100%;
+}
+
+body h1 {
+  align-items: center;
+}
+
+Body img {
+  width: 400px;
+  height: 240px;
+  margin-top: 00px;
+  margin-bottom: 50px;
+  margin-left: 480px;
+  margin-right: 50px;
+  text-align: center;
+}

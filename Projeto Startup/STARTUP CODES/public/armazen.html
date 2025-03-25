@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Armazen</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        rel="stylesheet"
+      />
+      <link href="CSS/armazen.css" rel="stylesheet" type="text/css" />
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"
+      ></script>
+      <link
+        rel="icon"
+        href="https://www.ascendstudio.co.uk/wp-content/uploads/2017/01/belerion-logo-design-ascend-a.jpg"
+        type="image/x-icon"
+      />
+    </head>
+    <body>
+      <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Usuários Cadastrados</h1>
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 border-b">Nome</th>
+              <th class="py-2 px-4 border-b">Email</th>
+              <th class="py-2 px-4 border-b">Data de Cadastro</th>
+              <th class="py-2S px-4 border-b">Status</th>
+              <th class="py-2D px-4 border-b">Donate?</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBodyRegistered">
+            <!-- Os dados dos usuários cadastrados serão inseridos aqui -->
+          </tbody>
+        </table>
+      </div>
+      <div class="container mx-auto p-5">
+        <h1 class="text-2xl font-bold mb-5">Usuários Logados</h1>
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr>
+              <th class="py-3 px-4 border-b">Nome</th>
+              <th class="py-3 px-4 border-b">Email</th>
+              <th class="py-3 px-4 border-b">Data de Login</th>
+              <th class="py-3S px-4 border-b">Status</th>
+              <th class="py-3D px-4 border-b">Donate?</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBodyLoggedIn">
+            <!-- Os dados dos usuários logados serão inseridos aqui -->
+          </tbody>
+        </table>
+      </div>
+      <script>
+        // armazen.js
+
+        // Função para carregar os dados dos usuários cadastrados
+        function loadRegisteredUsers() {
+          const registeredUsers = Object.keys(localStorage)
+            .filter((key) => key.includes("@")) // Filtra apenas os emails
+            .map((key) => JSON.parse(localStorage.getItem(key)));
+
+          const userTableBody = document.getElementById(
+            "userTableBodyRegistered"
+          );
+          registeredUsers.forEach((user) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                    <td class="py-2 px-4 border-b">${user.firstname}</td>
+                    <td class="py-2 px-4 border-b">${user.email}</td>
+                    <td class="py-2 px-4 border-b">${new Date().toLocaleDateString()}</td>
+                    <td class="py-2S px-4 border-b">free</td>
+                     <td class="py-2D px-4 border-b">No</td>
+                `;
+            userTableBody.appendChild(row);
+          });
+        }
+
+        // Função para carregar os dados dos usuários logados
+        function loadLoggedInUsers() {
+          const loggedInUsers = Object.keys(localStorage)
+            .filter((key) => key.includes("currentUser ")) // Corrigido para remover espaços
+            .map((key) => JSON.parse(localStorage.getItem(key)));
+
+          const userTableBody = document.getElementById(
+            "userTableBodyLoggedIn"
+          );
+          loggedInUsers.forEach((user) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+            <td class="py-3 px-4 border-b">${user.firstname}</td>
+            <td class="py-3 px-4 border-b">${user.email}</td>
+            <td class="py-3 px-4 border-b">${new Date().toLocaleDateString()}</td>
+            <td class="py-3S px-4 border-b">free</td>
+            <td class="py-3D px-4 border-b">No</td>
+        `;
+            userTableBody.appendChild(row);
+          });
+        }
+        // Chama as funções ao carregar a página
+        window.onload = function () {
+          loadRegisteredUsers();
+          loadLoggedInUsers();
+        };
+      </script>
+    </body>
+  </html>
+</html>
