@@ -20,22 +20,18 @@
     ></script>
     <link
       rel="icon"
-      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB0klEQVRYhe2VO0tcURSFP3zEsbXX1JE0g476A7SwCQSCYqsDgyCK8YFaKMI0WiSNf8DaX2AR0ELR+ABBGLBQRLDRgIJPFK/FWYfZHEVmkptCuKtb3zlnr8Nln30hUaJE70yzwEHA5oAHIAJOgZ7/FT6lkG3D9sUKwCJwJf8j7vAJFd4wbE/se7B3GfgcZ/j4K+E7YqPydXEGWo0paNOwTbFJ+Vr5leBspdb+WiOvhK+JTcungHuxFrFPwKFYBFwCHeWGd+vwb8NWxfLyNcCdWFqszQTncY17Kf+lnAtEwInxv8Tm5D8At2JNYq3yV0BVUO8ceCo1/KMK9cnn5H/KVwM3Ys1iGflrrQN0mpqDWq8v5QL12pwzrMuEX2s9I9Ysf4P7MgAzYtngAg2lXADgETgLWBXFQdMq1iR/a8L9wFo2Z/+IlaxOih08hWso31xt2pOWv8M1JLi5EOF6xqsg9rWcCwC0Axcm+Aj3xMA9uQj3BFNiQ2KrpoYf1QPlhlulgIqAraiwHzT98utmjx/Vg/8S/pb8+M3ycmbsig3FGdgILAWsV0G7hm2JDccZDjCvwmfAAsV/wp7Z439SI3GHe30Djim++3ywXsC9mkSJEr0fPQMYZJApzxnpNAAAAABJRU5ErkJggg=="
+      href="https://www.ascendstudio.co.uk/wp-content/uploads/2017/01/belerion-logo-design-ascend-a.jpg"
       type="image/x-icon"
     />
-
-  <script src='./JS/Home.js></script>
-
-    
   </head>
   <body>
     <header>
       <nav>
         <a href="Home.html" class="active">Home</a>
+        <a href="BestDesigners.html">Best Designers</a>
         <a href="Donations.html">Donations</a>
         <a href="AboutUs.html">About Us</a>
         <a href="Contact.html">Contact</a>
-        <a href="BestDesigners.html">Best Designers</a>
         <a href="Collaborations.html">Collaborations</a>
       </nav>
       <div class="actions">
@@ -114,7 +110,7 @@
     <div class="barLado">
       <a href="#">Client</a><br />
       <a href="#">Favorites</a><br />
-      <a href="Termos.html">Terms</a><br />
+      <a href="#">Terms</a><br />
       <a href="#">Social</a><br />
       <a href="#">Settings</a><br />
       <a href="index.html">LogOut</a><br />
@@ -156,11 +152,10 @@
           </div>
         </div>
 
-        <!-- Main Content --------------------------------------->
-
+        <!-- Main Content -->
         <div class="main-content flex-1 text-center md:text-left">
           <div class="mb-8">
-            <h2>Logo e nome</h2>
+            <h2 class="dark">Logo e nome</h2>
             <h3 class="h3">Digital designer and illustrator.</h3>
           </div>
           <div class="flex justify-center md:justify-start space-x-4">
@@ -172,7 +167,6 @@
       </div>
 
       <!-- Pesquisa -->
-
       <div class="container-input">
         <input type="text" placeholder="Search" name="text" class="input" />
         <svg
@@ -188,8 +182,6 @@
           ></path>
         </svg>
       </div>
-
-      <!---------------------------------------------------------->
     </div>
     <div class="Baixo">
       <div class="Post">
@@ -205,8 +197,90 @@
         </p>
       </div>
     </div>
-    <footer class="footer">
-      <p>&copy; 2025 NOME KKKK</p>
-    </footer>
+    <script>
+      function loadImage(event) {
+        const image = document.getElementById("profileImage");
+        const file = event.target.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            image.src = e.target.result; // Define a nova imagem
+          };
+          reader.readAsDataURL(file); // Lê o arquivo como uma URL de dados
+        }
+      }
+    </script>
+    <script>
+      $(".barLado").hide();
+
+      $(".bars").click(function () {
+        if ($(".barLado").is(":visible")) {
+          $(".barLado").slideUp("slow");
+        } else {
+          $(".barLado").slideDown("slow");
+        }
+      });
+
+      // modo claro/escuro
+      $(".sunMoon").click (function(){
+        $("body").toggleClass("claro");
+      });
+
+    </script>
+    <script>
+      // Função para atualizar o perfil com os dados do usuário
+      function updateProfile() {
+        const currentUser = JSON.parse(localStorage.getItem("currentUser "));
+
+        if (currentUser) {
+          document.querySelector(".Name").textContent = currentUser.firstname; // Atualiza o nome
+          document.querySelector(".Email").textContent = currentUser.email; // Atualiza o email
+        }
+      }
+
+      // Chama a função ao carregar a página
+      window.onload = updateProfile;
+    </script>
+    <script>
+      // Função para carregar a imagem
+      function loadImage(event) {
+        const image = document.getElementById("profileImage");
+        const file = event.target.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            image.src = e.target.result; // Define a nova imagem
+            localStorage.setItem("profileImage", e.target.result); // Armazena a imagem no localStorage
+          };
+          reader.readAsDataURL(file); // Lê o arquivo como uma URL de dados
+        }
+      }
+
+      // Função para atualizar o perfil com os dados do usuário
+      function updateProfile() {
+        const currentUser = JSON.parse(localStorage.getItem("currentUser "));
+
+        if (currentUser) {
+          document.querySelector(".Name").textContent = currentUser.firstname; // Atualiza o nome
+          document.querySelector(".Email").textContent = currentUser.email; // Atualiza o email
+        }
+
+        // Carrega a imagem de perfil do localStorage
+        const storedImage = localStorage.getItem("profileImage");
+        if (storedImage) {
+          document.getElementById("profileImage").src = storedImage; // Define a imagem armazenada
+        }
+      }
+
+      // Chama a função ao carregar a página
+      window.onload = function () {
+        updateProfile(); // Atualiza o perfil
+      };
+    </script>
+    </script>
+<footer>
+  <p>&copy; 2025 Nome.</p>
   </body>
 </html>
